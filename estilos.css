@@ -1,45 +1,90 @@
-*{
-    background-color: rgb(254, 254, 255);
-    text-align: center;
-}
-
-.cabecera {
-  display: inline-block;
-  width: 100px;
-  height: 100px;
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 80%;
+  margin: 0 auto;
 }
 
 h1 {
-    color: lightblue;
-    text-align: center;
-    font-size: 80px;
+  font-size: 60px;
+  color: rgb(0, 0, 0);
+  position: absolute;
+  top: 10px;
+  left: 280px;
+  margin: 100px;
+  text-shadow: #181818 2px 0 10px;
 }
 
-.logo{
-  height: 700px;
-  width: 700px;
-  border-radius: 50%;
-  z-index: 1;
+.cabecera {
+  position: relative;
+  width: 100%;
+  max-width: 800px;
+  margin-top: auto;
+}
+
+.logo {
   position: absolute;
-  top: 320px;
-  left: 960px;
+  left: 360px;
+  width: 390px;
+  height: 390px;
+  /*border-radius: 50%;*/
+  margin-left: 65px;
+}
+
+.banner {
+  display: block;
+  width: 1200px;
+  height: 400px;
+}
+
+.parracabecera {
+  font-size: 20px;
+  color: rgb(0, 0, 0);
+  position: absolute;
+  top: 150px;
+  left: 380px;
+  text-shadow: #181818 2px 0 10px;
+}
+
+.miembros{
+  width: 80%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+}
+
+.miembro1 {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.miembro2 {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.miembro1 .jorge {
+  border-radius: 50%;
+  width: 250px;
+  height: 250px;
+  margin: 20px;
+}
+
+p {
+  font-size: 40px;
+  text-align: center;
 } 
 
-.banner{
-  position: absolute;
-  max-height:100%;
-  min-height:20%;
-  width:50%;
-  z-index: -1;
+.miembro2 .antonio {
+  border-radius: 50%;
+  width: 250px;
+  height: 250px;
+  margin: 20px;
 }
-/*
-#contenedorPadre {
-    position: relative;
-  }
-  #contenedorHijo {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-  }
-  */
