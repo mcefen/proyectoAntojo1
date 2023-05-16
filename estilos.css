@@ -6,6 +6,7 @@ body {
   height: 100%;
   width: 80%;
   margin: 0 auto;
+  background-color: lightblue;
 }
 
 .contenedor {
@@ -14,17 +15,16 @@ body {
 
 .cabecera {
   position: relative;
-  width: 100%;
-  max-width: 800px;
+  max-width: 100%;
   margin-top: auto;
   display: block;
 }
 
 .logo {
   position: absolute;
-  left: 400px;
-  width: 380px;
-  height: 380px;
+  left: 550px;
+  width: 360px;
+  height: 360px;
   margin-left: 100px;
   display: block;
   background: url(/imagenes/Antojo-Logo.png) no-repeat center;
@@ -32,7 +32,7 @@ body {
 
 .banner {
   display: block;
-  width: 1000px;
+  width: 1200px;
   height: 360px;
   background: url(/imagenes/banner.jpg) no-repeat center;
   background-size: cover;
