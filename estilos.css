@@ -3,9 +3,6 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  height: 100%;
-  width: 80%;
-  margin: 0 auto;
 }
 
 .contenedor {
@@ -14,14 +11,14 @@ body {
 
 .cabecera {
   position: relative;
-  max-width: 100%;
   margin-top: auto;
   display: block;
+  width: 100% !important;
 }
 
 .logo {
   position: absolute;
-  left: 550px;
+  left: 1000px;
   width: 360px;
   height: 360px;
   margin-left: 100px;
@@ -31,7 +28,8 @@ body {
 
 .banner {
   display: block;
-  width: 1200px;
+  /*width: 1200px;*/
+  width: 100% !important; /*solucion 100% pantalla */
   height: 360px;
   background: url(/imagenes/banner.jpg) no-repeat center;
   background-size: cover;
@@ -57,7 +55,7 @@ h1 {
 }
 
 .miembros{
-  width: 80%;
+  width: 100%;
   height: 100%;
   display: flex;
   flex-direction: row;
@@ -77,11 +75,23 @@ h1 {
   align-items: center;
 }
 
+.miembro3 {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 .miembro1 .jorge {
   border-radius: 50%;
-  width: 250px;
-  height: 250px;
+  width: 200px;
+  height: 200px;
   margin: 20px;
+
+}
+
+.jorge:hover, .antonio:hover, .elena:hover {
+  -webkit-transform:scale(1.3);transform:scale(1.3); /* EFECTO IMAGEN */
 }
 
 p {
@@ -91,18 +101,25 @@ p {
 
 .miembro2 .antonio {
   border-radius: 50%;
-  width: 250px;
-  height: 250px;
+  width: 200px;
+  height: 200px;
+  margin: 20px;
+}
+
+.miembro3 .elena {
+  border-radius: 50%;
+  width: 200px;
+  height: 200px;
   margin: 20px;
 }
 
 .pie {
   background-color: rgb(20, 20, 20);
-  width: 78%;
+  width: 100% !important;
 }
 .pie p{
   font-size: 15px;
   text-align: center;
-  padding: 3px;
+  padding: 7px;
   color: rgb(240, 240, 240);
 }
