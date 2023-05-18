@@ -1,56 +1,46 @@
 body {
-  display: flex;
+  display: flex; /* Elementos Flexibles */
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  margin: 0;
+  width: 100% !important; /*solucion 100% para el BODY */
 }
 
 .contenedor {
-  margin-top: 5%;
+  margin-top: 25%;
 }
 
 .cabecera {
   position: relative;
-  margin-top: auto;
   display: block;
   width: 100% !important;
 }
 
 .logo {
   position: absolute;
-  left: 1000px;
-  width: 360px;
+  width: 100% !important; /*solucion 100% para el logo. Como el body tiene 100% el llogo ocupara lo mismo */
   height: 360px;
-  margin-left: 100px;
   display: block;
-  background: url(/imagenes/Antojo-Logo.png) no-repeat center;
+  background: url(./imagenes/logo.jpg);
 }
 
-.banner {
-  display: block;
-  /*width: 1200px;*/
-  width: 100% !important; /*solucion 100% pantalla */
-  height: 360px;
-  background: url(/imagenes/banner.jpg) no-repeat center;
-  background-size: cover;
-}
-
-h1 {
+.cabecera h1 {
   font-size: 60px;
-  color: rgb(0, 0, 0);
+  color: black;
   position: absolute;
-  top: 110px;
-  margin: 10px;
+  margin-top: 10px;
+  margin-left: 300px;
   text-shadow: #181818 2px 0 10px;
   display: block;
 }
 
-.parracabecera {
+.cabecera .parracabecera {
   font-size: 20px;
   color: rgb(0, 0, 0);
   position: absolute;
-  top: 160px;
-  left: 10px;
+  margin-top: 70px;
+  margin-left: 300px;
   text-shadow: #181818 2px 0 10px;
 }
 
@@ -63,6 +53,7 @@ h1 {
 
 .miembro1 {
   flex: 1;
+  -ms-flex: 1; /* hack para IE10 porque Mocosoft se salta los estandares*/
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -70,6 +61,7 @@ h1 {
 
 .miembro2 {
   flex: 1;
+  -ms-flex: 1; /* hack para IE10 porque Mocosoft se salta los estandares*/
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -77,6 +69,7 @@ h1 {
 
 .miembro3 {
   flex: 1;
+  -ms-flex: 1; /* hack para IE10 porque Mocosoft se salta los estandares*/
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -87,23 +80,17 @@ h1 {
   width: 200px;
   height: 200px;
   margin: 20px;
-
+  box-shadow: 2px 2px 5px red;
+  transition: all 0.4s ease-in-out;
 }
-
-.jorge:hover, .antonio:hover, .elena:hover {
-  -webkit-transform:scale(1.3);transform:scale(1.3); /* EFECTO IMAGEN */
-}
-
-p {
-  font-size: 40px;
-  text-align: center;
-} 
 
 .miembro2 .antonio {
   border-radius: 50%;
   width: 200px;
   height: 200px;
   margin: 20px;
+  box-shadow: 2px 2px 5px orange;
+  transition: all 0.4s ease-in-out;
 }
 
 .miembro3 .elena {
@@ -111,7 +98,127 @@ p {
   width: 200px;
   height: 200px;
   margin: 20px;
+  box-shadow: 2px 2px 5px green;
+  transition: all 0.4s ease-in-out;
 }
+.jorge:hover, .antonio:hover, .elena:hover {
+  -webkit-transform:scale(1.3);transform:scale(1.3); /* EFECTO IMAGEN */
+}
+p {
+  font-size: 40px;
+  text-align: center;
+} 
+.linea {
+  border-top: 5px solid black;
+  height: 2px;
+  padding: 0;
+  margin: 20px auto 0 auto;
+}
+
+/* COMIENZO HERRAMIENTAS */
+
+.herramientas{
+  width: 100%;
+  height: 100%;
+  margin-top: 65px;
+  display: flex;
+  flex-direction: row;
+}
+
+.tituloherra{
+  font-size: 45px;
+  color: black;
+  position: absolute;
+  text-shadow: #181818 2px 0 10px;
+  margin-left: 200px;
+  margin-top: 15px;
+}
+	
+
+.figma{
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.figmalogo{
+  border-radius: 50%;
+  width: 200px;
+  height: 200px;
+  margin: 20px;
+  box-shadow: 2px 2px 5px blue;
+  transition:all 0.5s ease-in-out;
+}
+
+.render{
+  flex: 1; /* los elementos flexibles tengan la misma longitud, independientemente de su contenido */
+  -ms-flex: 1; /* hack para IE10 porque Mocosoft se salta los estandares*/
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+	
+.renderlogo{
+  border-radius: 50%;
+  width: 200px;
+  height: 200px;
+  margin: 20px;
+  box-shadow: 2px 2px 5px blue;
+  transition: all 0.4s ease-in-out;
+}
+
+.vsc{
+  flex: 1; /* los elementos flexibles tengan la misma longitud, independientemente de su contenido */
+  -ms-flex: 1; /* hack para IE10 porque Mocosoft se salta los estandares*/
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.vsclogo{
+  border-radius: 50%;
+  width: 200px;
+  height: 200px;
+  margin: 20px;
+  box-shadow: 2px 2px 5px blue;
+  transition: all 0.4s ease-in-out;
+}
+
+.vsclogo:hover, .renderlogo:hover, .figmalogo:hover {
+  filter: blur(5px);
+  transition:all 0.5s ease-in-out;
+}
+
+/* FIN HERRAMIENTAS */
+
+/* COMIENZO BANNER */
+.banner{
+  flex: 1;
+  -ms-flex: 1; /* hack para IE10 porque Mocosoft se salta los estandares*/
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  }
+  
+.bangi{
+  border-radius: 10%;
+  width: 600px;
+  height: 300px;
+  margin: 20px;
+  box-shadow: 4px 4px 4px  4px blue;
+  transition: all 0.4s ease-in-out;
+  }
+ 
+ .bangi:hover {
+ 	border-radius:50%;
+	-webkit-border-radius:50%;
+	box-shadow: 0px 0px 15px 15px #ec731e;
+	-webkit-box-shadow: 0px 0px 15px 15px #ec731e;
+	transform: rotate(360deg);
+	-webkit-transform: rotate(360deg);
+}
+/* FIN BANNER */
 
 .pie {
   background-color: rgb(20, 20, 20);
@@ -120,6 +227,50 @@ p {
 .pie p{
   font-size: 15px;
   text-align: center;
-  padding: 7px;
+  padding: 1px;
   color: rgb(240, 240, 240);
+}
+
+/* NO FUNCIONA. HABRIA QUE HACER MAS PRUEBAS */
+
+/*Estilos para móviles*/
+@media only screen and (max-width: 900px) {
+
+.contenedor {
+	width: 100% !important;
+	
+	}
+.logo {
+  position: absolute;
+  width: 100% !important; /*solucion 100% pantalla */
+  display: block;
+  background: url(./imagenes/logo.jpg);
+  height: 100px;
+}
+
+  .cabecera h1 {
+    font-size: 35px;
+    margin-left: 0;
+    margin-bottom: 45px;
+  }
+  .cabecera .parracabecera {
+    font-size: 16px;
+    margin-left: center;
+  }
+  .miembro1 .jorge, .miembro2 .antonio, .miembro3 .elena {
+    width: 80px;
+    height: 80px;
+  }
+  .tituloherra {
+    font-size: 30px;
+    margin-left: 0;
+    text-align: center;
+  }
+  .figmalogo, .renderlogo, .vsclogo {
+    width: 150px;
+    height: 150px;
+  }
+  .pie p{
+    font-size: 12px;
+  }
 }
